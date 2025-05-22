@@ -1,0 +1,47 @@
+	<div>
+        <!-- Contact-->
+        <section class="page-section" id="contact">
+            <div class="container width20 marginTop5 shadow-lg card o-hidden border-1 shadow-lg padding20">
+                <div class="text-center">
+                    <h2 class="section-heading text-muted">로그인</h2>
+                    <h3 class="section-subheading text-muted">회원정보가 없다면 회원가입을 눌러주세요.</h3>
+                </div>
+                <form id="contactForm" name="loginFrm" action="login" method="post" enctype="UTF-8">
+                    <div class="row align-items-stretch">
+                        <div class="text-center">
+                            <div class="form-group">
+                                <!-- ID input-->
+                                <input class="form-control" id="id" name="username" type="text" placeholder="아이디를 입력하세요 *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="name:required">아이디는 필수 입력 항목 입니다.</div>
+                            </div>
+                            <div class="form-group">
+                                <!-- Password input-->
+                                <input class="form-control" id="Password" name="password" type="Password" placeholder="패스워드를 입력하세요. *" data-sb-validations="required" onkeydown="Enter_Check();"/>
+                                <div class="invalid-feedback" data-sb-feedback="email:required">패스워드는 필수 입력 항목 입니다.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div th:if="${error}">
+                        <div class="text-center text-danger mb-3">
+                            <div class="fw-bolder"></div>
+                        </div>
+                    </div>
+                    <!-- Submit error message-->
+                    <!---->
+                    <!-- This is what your users will see when there is-->
+                    <!-- an error submitting the form-->
+                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                    <!-- Submit Button-->
+                    <div class="text-center">
+                    	<button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="button" onclick="loadContent('home.html');">로그인</button>
+                    </div>
+                    <div class="text-center marginTop20">
+                    	<div><a href="javascript:loadContent('joinmember.html');">아이디가 없다면 여기를 눌러 회원가입</a></div>
+                    	<br>
+                    	<div><a href="javascript:loadContent('forget.html');">비밀번호 찾기</a></div>
+                    </div>
+                </form>
+            </div>
+        </section>
+	</div>
+

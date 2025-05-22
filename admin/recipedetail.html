@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout}">
+	<div layout:fragment="content">
+	<script src="../js/admin/recipe.js"></script>
+        <!-- Portfolio Grid-->
+        <section class="page-section bg-light">
+            <div class="container">
+	            <div class="view2_pic border-1 shadow-lg">
+	            	<input type="hidden" id="recipe_num" value="31">
+	            	<div class="view_cate st2" style="z-index:10;">
+	                	<div class="view_cate_num"><span class="hit font_num">19</span></div>
+	            	</div>
+	                <div class="centeredcrop">
+	            		<img id="main_thumbs" src="../fileupload/2119ca55925e_s9.jpg" alt="main thumb">
+	            	</div>
+		            <div class="user_info2">
+		                <span class="user_info2_name">오늘은 이삿날 중식</span>
+		            </div>
+	        	</div>
+                <div class="text-center marginTop5">
+                    <h2 class="section-heading text-uppercase">대패 우유 카레우동 레시피</h2>
+                    <h3 class="section-subheading text-muted">물 대신 우유로 끓여 만든 우유 카레우동입니다. 고명으로 대패삼겹살을 올려 같이 먹으면 조합이 아주 좋아요.</h3>
+                </div>
+                <div class="view2_summary_info">
+                	<span class="view2_summary_info1">1인분</span>
+                	<span class="view2_summary_info2">20분 이내</span>
+                	<span class="view2_summary_info3">아무나</span>
+                </div>
+                <div class="row">
+	                <div class="view_ingred">
+	                    <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">
+                                [재료]
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">우동면1개, 양파 1/2개, 우유 300ml, 고체카레 또는 카레가루 1개 / 3스푼, 대패삼겹살 100g</div>
+                        </div>
+	                </div>
+	                <div class="view_step" data-tag="웹-조리순서시작">
+						<div id="stepDiv1" class="view_step_cont media step1">
+							<div id="stepdescr1" class="media-body">양파를 채 썰어주세요.</div>
+							<div id="stepimg1" class="media-right">
+								<img src="../fileupload/5d0d65f4aff8_s1.jpg">
+							</div>
+						</div>
+						<div id="stepDiv2" class="view_step_cont media step2">
+							<div id="stepdescr2" class="media-body">팬에 대패삼겹살을 바싹 익혀주세요.</div>
+							<div id="stepimg2" class="media-right">
+								<img src="../fileupload/2f972242db29_s2.jpg">
+							</div>
+						</div>
+						<div id="stepDiv3" class="view_step_cont media step3">
+							<div id="stepdescr3" class="media-body">대패삼겹살을 한쪽에 빼두고 남은 기름에 양파를 볶아주세요. 양파가 흐물해지고 색이 갈색빛이 될때까지 볶아주세요.</div>
+							<div id="stepimg3" class="media-right">
+								<img src="../fileupload/2824bc791735_s3.jpg">
+							</div>
+						</div>
+						<div id="stepDiv4" class="view_step_cont media step4">
+							<div id="stepdescr4" class="media-body">키친타올로 기름을 닦고나서 우유를 부어주세요.</div>
+							<div id="stepimg4" class="media-right">
+								<img src="../fileupload/6eb1af9448d2_s4.jpg">
+							</div>
+						</div>
+						<div id="stepDiv5" class="view_step_cont media step5">
+							<div id="stepdescr5" class="media-body">강불로 끓여주세요.	</div>
+							<div id="stepimg5" class="media-right">
+								<img src="../fileupload/dd1613ab84e7_s5.jpg">
+							</div>
+						</div>
+						<div id="stepDiv6" class="view_step_cont media step6">
+							<div id="stepdescr6" class="media-body">끓어오르면 고체카레를 넣고 바닥에 늘러 붙지않게 저어주세요.	</div>
+							<div id="stepimg6" class="media-right">
+								<img src="../fileupload/99526e2aba3f_s6.jpg">
+							</div>
+						</div>
+						<div id="stepDiv7" class="view_step_cont media step7">
+							<div id="stepdescr7" class="media-body">우동면을 넣고 우동면이 풀어지게 젓가락으로 살살 건들여가면서 저어주세요.</div>
+							<div id="stepimg7" class="media-right">
+								<img src="../fileupload/53009938f248_s7.jpg">
+							</div>
+						</div>
+						<div id="stepDiv8" class="view_step_cont media step8">
+							<div id="stepdescr8" class="media-body">우동면과 양념이 잘 베어들면 불을 꺼주세요.	</div>
+							<div id="stepimg8" class="media-right">
+								<img src="../fileupload/fa9795d6e235_s8.jpg">
+							</div>
+						</div>
+						<div id="stepDiv9" class="view_step_cont media step9">
+							<div id="stepdescr9" class="media-body">접시에 우동을 담아주고 위에 고명으로 대패삼겹살을 올려주면 완성입니다.	</div>
+							<div id="stepimg9" class="media-right">
+								<img src="../fileupload/2119ca55925e_s9.jpg">
+							</div>
+						</div>
+			  		</div>
+	            </div>
+	            <div class="recipe_add_div">
+                    <button class="btn btn-secondary btn-lg text-uppercase" type="button" onclick="approvalRecipe('N')">미승인</button>
+                    <button class="btn btn-danger btn-lg text-uppercase" type="button" onclick="deleteRecipe()">삭제</button>
+                    <button class="btn btn-success btn-lg text-uppercase" type="button" onclick="loadContent('/admin/recipelist.html');">목록</button>
+                </div>
+            </div>
+        </section>
+        
+        
+	</div>
+</html>

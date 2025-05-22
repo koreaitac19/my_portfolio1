@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout}">
+	<div layout:fragment="content">
+		<!-- Masthead-->
+	    <header class="masthead">
+	        <div class="container">
+	            <div class="masthead-subheading" style="text-shadow: 5px 5px 4px gray;">Welcome To MY Recipe!</div>
+	            <div class="masthead-heading text-uppercase" style="text-shadow: 5px 5px 4px gray;">오늘의 레시피</div>
+	            <a class="btn btn-primary btn-xl text-uppercase" href="#portfolio">오늘의 추천 레시피</a>
+	        </div>
+	    </header>
+        <!-- Portfolio Grid-->
+        <section class="page-section bg-light" id="portfolio">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">오늘의 추천 레시피</h2>
+                    <h3 class="section-subheading text-muted">오늘 저녁 고민되는 사람은 추천 레시피로 골라요!	</h3>
+                </div>
+                <div class="row">
+                    <!-- 레시피 리스트 영역 -->
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="javascript:loadContent('recipedetail.html');">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="bi bi-search"></i></div>
+                                </div>
+                                <img class="img-fluid" src="./fileupload/07eaf8ff5437_m1.jpg" alt="...">
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading recipe-title-ellipsis">가지볶음보다 맛있는 가지 스테이크 맛보면 멈출 수 없어요.</div>
+                                <div class="portfolio-caption-subheading text-muted recipe-sub-ellipsis">가지로 만드는 스테이크입니다. 덮밥으로 만들어도 맛있어요~ 단짠 소스가 아주 좋습니다. 꼭 만들어 보세요.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="javascript:loadContent('recipedetail.html');">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="bi bi-search"></i></div>
+                                </div>
+                                <img class="img-fluid" src="./fileupload/2f9c459b6a82_garibi01.jpg" alt="...">
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading recipe-title-ellipsis">전설의 잡탕찌게</div>
+                                <div class="portfolio-caption-subheading text-muted recipe-sub-ellipsis">이 찌게에는 슬픈 전설이 있어</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="javascript:loadContent('recipedetail.html');">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="bi bi-search"></i></div>
+                                </div>
+                                <img class="img-fluid" src="./fileupload/ea82a8544d88_다운로드.jpg" alt="...">
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading recipe-title-ellipsis">하루의 마무리는 야식추천메뉴 8가지</div>
+                                <div class="portfolio-caption-subheading text-muted recipe-sub-ellipsis">야식 먹으면 하루 피로가 싹~ 풀리잖아요~?
+                                    여러분이 가장 좋아하는 야식은 무엇인가요?
+                                    만.레가 더 특별한 야식 메뉴를 추천합니다 O(∩_∩)O</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="javascript:loadContent('recipedetail.html');">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="bi bi-search"></i></div>
+                                </div>
+                                <img class="img-fluid" src="./fileupload/03276eaf65f2_m1.jpg" alt="...">
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading recipe-title-ellipsis">매콤한 돼지고기깻잎전 맛있게 만들기</div>
+                                <div class="portfolio-caption-subheading text-muted recipe-sub-ellipsis">깻잎향이 솔솔~ 밥반찬으로도 딱인 돼지고기깻잎전이예요.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="javascript:loadContent('recipedetail.html');">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="bi bi-search"></i></div>
+                                </div>
+                                <img class="img-fluid" src="./fileupload/e8e46393153a_m1.jpg" alt="...">
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading recipe-title-ellipsis">대패 우유 카레우동 레시피</div>
+                                <div class="portfolio-caption-subheading text-muted recipe-sub-ellipsis">물 대신 우유로 끓여 만든 우유 카레우동입니다. 고명으로 대패삼겹살을 올려 같이 먹으면 조합이 아주 좋아요.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="javascript:loadContent('recipedetail.html');">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="bi bi-search"></i></div>
+                                </div>
+                                <img class="img-fluid" src="./fileupload/2fb2c3e9e059_t.jpg" alt="...">
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading recipe-title-ellipsis">밥 비벼 먹기 좋은 참치 두부조림</div>
+                                <div class="portfolio-caption-subheading text-muted recipe-sub-ellipsis">간단한 저녁메뉴를 고민하다가, 든든하고 간단히 먹을 수 있는 두부 조림. 참치를 넣으니 찐득하니, 밥에 쓱싹 비벼 먹으니 넘 맛있더라고요. ❣️ 해장으로도 좋을 것 같아요. ✨간단한 한 끼 메뉴로 추천추천입니다.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 레시피 리스트 영역 끝 -->
+                </div>
+                <!-- 하단 카드 영역 -->
+                
+                <div class="container-fluid">
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">등록된 레시피 정보</h1>
+                    </div>
+                    <div class="row">
+                        <!-- Earnings (Annual) Card Example -->
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                등록된 레시피 개수
+                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><span>1,067</span> 개</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tasks Card Example -->
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                            	레시피 평균 평점
+                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            	<img class="stars" src="./img/icon/ico_star_5.png">
+                                            	<span>강력추천</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pending Requests Card Example -->
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                            	사이트 이용자 수
+                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><span>22,354</span>명</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <!-- Collapsable Card Example -->
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Accordion -->
+                                <a href="/" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                                    <h6 class="m-0 font-weight-bold text-success">요리할 때 가장 많이 보는 사이트는?</h6>
+                                </a>
+                                <!-- Card Content - Collapse -->
+                                <div class="collapse show" id="collapseCardExample">
+                                    <div class="card-body">
+                                        2025년부터 서비스를 이어온 <strong>오늘의레시피</strong>는 <strong ><span>22,354</span>명</strong>의 이용자들이 요리하는 즐거움을 나누고 있습니다.<br>
+										식사, 디저트, 제빵, 안주 조리법이 필요할 때면 언제나 <strong>오늘의레시피</strong>를 찾아보세요.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+        
+	</div>
+</html>

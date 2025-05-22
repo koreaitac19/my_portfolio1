@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout}">
+	<div layout:fragment="content">
+        <!-- Portfolio Grid-->
+        <section class="page-section bg-light" id="portfolio">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">오늘의 레시피</h2>
+                    <h3 class="section-subheading text-muted">요리하는 즐거움! 내가 좋아하는 레시피를 이웃들과 공유해 보세요. 모두가 함께하는 레시피 플랫폼 "오늘의 레시피".<br>레시피 등록은 로그인 이후에 가능합니다.</h3>
+                </div>
+                <div class="recipe_add_div">
+                    <button sec:authorize="isAuthenticated()" class="btn btn-success btn-xl text-uppercase" id="submitButton" type="button" onclick="loadContent('registrecipe.html');">레시피 등록하기</button>
+                </div>
+                <div class="row">
+                	<!-- 레시피 리스트 영역 -->
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="javascript:loadContent('recipedetail.html');">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="bi bi-search"></i></div>
+                                </div>
+                                <img class="img-fluid" src="./fileupload/1a91bf57f84c_cornchese01.jpg" alt="...">
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading recipe-title-ellipsis">맛있는 콘 치즈 토스트</div>
+                                <div class="portfolio-caption-subheading text-muted recipe-sub-ellipsis">맛있는 콘 치즈 토스트</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="javascript:loadContent('recipedetail.html');">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="bi bi-search"></i></div>
+                                </div>
+                                <img class="img-fluid" src="./fileupload/ea82a8544d88_다운로드.jpg" alt="...">
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading recipe-title-ellipsis">라면</div>
+                                <div class="portfolio-caption-subheading text-muted recipe-sub-ellipsis">국민식</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="javascript:loadContent('recipedetail.html');">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="bi bi-search"></i></div>
+                                </div>
+                                <img class="img-fluid" src="./fileupload/e8e46393153a_m1.jpg" alt="...">
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading recipe-title-ellipsis">대패 우유 카레우동 레시피</div>
+                                <div class="portfolio-caption-subheading text-muted recipe-sub-ellipsis">물 대신 우유로 끓여 만든 우유 카레우동입니다. 고명으로 대패삼겹살을 올려 같이 먹으면 조합이 아주 좋아요.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="javascript:loadContent('recipedetail.html');">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="bi bi-search"></i></div>
+                                </div>
+                                <img class="img-fluid" src="./fileupload/2f9c459b6a82_garibi01.jpg" alt="...">
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading recipe-title-ellipsis">전설의 잡탕찌게</div>
+                                <div class="portfolio-caption-subheading text-muted recipe-sub-ellipsis">이 찌게에는 슬픈 전설이 있어</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="javascript:loadContent('recipedetail.html');">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="bi bi-search"></i></div>
+                                </div>
+                                <img class="img-fluid" src="./fileupload/8151864db453_m1.jpg" alt="...">
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading recipe-title-ellipsis">돼지고기 김치찌개 달인이 되는 황금레시피</div>
+                                <div class="portfolio-caption-subheading text-muted recipe-sub-ellipsis">나만 알고싶은 돼지고기김치찌개 레시피</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="javascript:loadContent('recipedetail.html');">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="bi bi-search"></i></div>
+                                </div>
+                                <img class="img-fluid" src="./fileupload/c808c7fe65c9_m1.jpg" alt="...">
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading recipe-title-ellipsis">최현석의 호텔 간짜파게티</div>
+                                <div class="portfolio-caption-subheading text-muted recipe-sub-ellipsis">유튜브에 최현석 셰프님이 나와 짜파게티를 이용해 호텔 간짜파게티를 만들어 주셨네요. 너무 궁금해서 만들어봤어요. 계속먹고싶어 지는 맛이고 재료도 복잡하지 않아 다시 만들 수 있을 것 같네요. 쟁반짜장이 드시고 싶을때 만들면 좋겠어요.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="javascript:loadContent('recipedetail.html');">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="bi bi-search"></i></div>
+                                </div>
+                                <img class="img-fluid" src="./fileupload/07eaf8ff5437_m1.jpg" alt="...">
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading recipe-title-ellipsis">가지볶음보다 맛있는 가지 스테이크 맛보면 멈출 수 없어요.</div>
+                                <div class="portfolio-caption-subheading text-muted recipe-sub-ellipsis">가지로 만드는 스테이크입니다. 덮밥으로 만들어도 맛있어요~ 단짠 소스가 아주 좋습니다. 꼭 만들어 보세요.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="javascript:loadContent('recipedetail.html');">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="bi bi-search"></i></div>
+                                </div>
+                                <img class="img-fluid" src="./fileupload/40e818573f73_m1.jpg" alt="...">
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading recipe-title-ellipsis">남은 탕수육으로 강정만들기</div>
+                                <div class="portfolio-caption-subheading text-muted recipe-sub-ellipsis">남은 탕수육으로 강정만들기 feat. 이틀 전 먹고 남은 탕수육</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="javascript:loadContent('recipedetail.html');">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="bi bi-search"></i></div>
+                                </div>
+                                <img class="img-fluid" src="./fileupload/03276eaf65f2_m1.jpg" alt="...">
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading recipe-title-ellipsis">매콤한 돼지고기깻잎전 맛있게 만들기</div>
+                                <div class="portfolio-caption-subheading text-muted recipe-sub-ellipsis">깻잎향이 솔솔~ 밥반찬으로도 딱인 돼지고기깻잎전이예요.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="javascript:loadContent('recipedetail.html');">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="bi bi-search"></i></div>
+                                </div>
+                                <img class="img-fluid" src="./fileupload/4212e5bfb676_m1.jpg" alt="...">
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading recipe-title-ellipsis">재료도 방법도 초간단! 떠먹는 치즈감자</div>
+                                <div class="portfolio-caption-subheading text-muted recipe-sub-ellipsis">출출한 늦은 저녁, 왕창 사놓은 감자를 보고 치즈감자를 해먹어 볼까 생각해서 만들어 먹어보았는데 생각보다 너무 맛있어서 올려용 :))</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="javascript:loadContent('recipedetail.html');">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="bi bi-search"></i></div>
+                                </div>
+                                <img class="img-fluid" src="./fileupload/2fb2c3e9e059_t.jpg" alt="...">
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading recipe-title-ellipsis">밥 비벼 먹기 좋은 참치 두부조림</div>
+                                <div class="portfolio-caption-subheading text-muted recipe-sub-ellipsis">간단한 저녁메뉴를 고민하다가, 든든하고 간단히 먹을 수 있는 두부 조림. 참치를 넣으니 찐득하니, 밥에 쓱싹 비벼 먹으니 넘 맛있더라고요. ❣️ 해장으로도 좋을 것 같아요. ✨간단한 한 끼 메뉴로 추천추천입니다.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="javascript:loadContent('recipedetail.html');">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="bi bi-search"></i></div>
+                                </div>
+                                <img class="img-fluid" src="./fileupload/623cef49322e_langcha01.jpg" alt="...">
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading recipe-title-ellipsis">하루의 마무리는 야식추천메뉴 8가지</div>
+                                <div class="portfolio-caption-subheading text-muted recipe-sub-ellipsis">야식 먹으면 하루 피로가 싹~ 풀리잖아요~? 여러분이 가장 좋아하는 야식은 무엇인가요? 만.레가 더 특별한 야식 메뉴를 추천합니다 O(∩_∩)O</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="javascript:loadContent('recipedetail.html');">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="bi bi-search"></i></div>
+                                </div>
+                                <img class="img-fluid" src="./fileupload/bfed9fea0bba_miyukkook.jpg" alt="...">
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading recipe-title-ellipsis">소고기 미역국</div>
+                                <div class="portfolio-caption-subheading text-muted recipe-sub-ellipsis">생일을 준비해서 만들어본 초보 요리사의 소고기 미역국</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="javascript:loadContent('recipedetail.html');">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="bi bi-search"></i></div>
+                                </div>
+                                <img class="img-fluid" src="./fileupload/1a91bf57f84c_cornchese01.jpg" alt="...">
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading recipe-title-ellipsis">맛있는 콘 치즈 토스트</div>
+                                <div class="portfolio-caption-subheading text-muted recipe-sub-ellipsis">집에서 남은 스위트콘, 치즈, 식빵을 한방에 해결하는 레시피</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 레시피 리스트 영역 끝 -->
+                </div>
+            </div>
+        </section>
+        
+        
+	</div>
+</html>

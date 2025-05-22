@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout}">
+<div layout:fragment="content">
+	<!-- Portfolio Grid-->
+	<section class="page-section bg-light">
+		<div class="container">
+			<div class="view2_pic border-1 shadow-lg">
+				<div class="view_cate st2" style="z-index:10;">
+					<div class="view_cate_num"><span class="hit font_num">12</span></div>
+				</div>
+				<div class="centeredcrop">
+					<img id="main_thumbs" src="./fileupload/03276eaf65f2_m1.jpg" alt="main thumb">
+				</div>
+				<div class="user_info2">
+					<span class="user_info2_name">우리나라 전통의 한식</span>
+				</div>
+			</div>
+			<div class="text-center marginTop5">
+				<h2 class="section-heading text-uppercase">매콤한 돼지고기깻잎전 맛있게 만들기</h2>
+				<h3 class="section-subheading text-muted">깻잎향이 솔솔~ 밥반찬으로도 딱인 돼지고기깻잎전이예요.</h3>
+			</div>
+			<div class="view2_summary_info">
+				<span class="view2_summary_info1">2인분</span>
+				<span class="view2_summary_info2">30분 이내</span>
+				<span class="view2_summary_info3">초급</span>
+			</div>
+
+			<div class="row">
+				<div class="view_ingred">
+					<div class="col mr-2">
+						<div class="text-xs font-weight-bold text-dark text-uppercase mb-1">
+							[재료]
+						</div>
+						<div class="h5 mb-0 font-weight-bold text-gray-800">돼지고기다짐육 300g,
+
+							두부 1/2모,
+
+							당근 1/4개,
+
+							대파 1개,
+
+							청양고추 2개,
+
+							깻잎 25장,
+
+							부침가루 100ml,
+
+							달걀 5개,
+
+							간장 1.5스푼,
+
+							다진마늘 1스푼,
+
+							청주 2스푼,
+
+							맛술 1스푼,
+
+							후추 </div>
+					</div>
+				</div>
+				<div class="view_step" data-tag="웹-조리순서시작">
+					<div id="stepDiv1" class="view_step_cont media step1">
+						<div id="stepdescr1" class="media-body">돼지고기 다짐육은 가볍게 키친타올로 핏물을 제거한 후 다진마늘, 후추, 맛술, 청주, 간장을 넣고 밑간하고 10분정도 냉장고에서 재워주세요.</div>
+						<div id="stepimg1" class="media-right">
+							<img src="./fileupload/a7f7dd3e5bbf_s1.jpg">
+						</div>
+					</div>
+					<div id="stepDiv2" class="view_step_cont media step2">
+						<div id="stepdescr2" class="media-body">야채는 가볍게 당근과 대파 청양고추만 다져서 넣었어요. 대파대신 양파를 넣어도 좋아요. 깻잎은 흐르는 물에 세척해주구요.</div>
+						<div id="stepimg2" class="media-right">
+							<img src="./fileupload/1a718b669069_s2.jpg">
+						</div>
+					</div>
+					<div id="stepDiv3" class="view_step_cont media step3">
+						<div id="stepdescr3" class="media-body">두부는 체에 받쳐 물기를 빼준 다음 볼에 돼지고기 다짐육과 야채, 부침가루 3스푼을 넣고 잘 섞어서 여러번 치대주세요.</div>
+						<div id="stepimg3" class="media-right">
+							<img src="./fileupload/5a0dc1bcaec8_s3.jpg">
+						</div>
+					</div>
+					<div id=" stepDiv4" class="view_step_cont media step4">
+							<div id="stepdescr4" class="media-body">깻잎 1장당 다짐육을 1스푼 떠서 깻잎 한쪽면에 넣으신후 깻잎을 반달모양으로 만들어주시면 되요.</div>
+							<div id="stepimg4" class="media-right">
+								<img src="./fileupload/26038b92cdd7_s4.jpg">
+							</div>
+						</div>
+						<div id="stepDiv5" class="view_step_cont media step5">
+							<div id="stepdescr5" class="media-body">깻잎 앞뒤로 부침가루를 골고루 입혀주신 후 계란옷으로 마무리</div>
+							<div id="stepimg5" class="media-right">
+								<img src="./fileupload/b9c848abfdc3_s5.jpg">
+							</div>
+						</div>
+						<div id="stepDiv6" class="view_step_cont media step6">
+							<div id="stepdescr6" class="media-body">예열된 팬에 노릇노릇 부쳐주면 완성이에요.</div>
+							<div id="stepimg6" class="media-right">
+								<img src="./fileupload/d0f01de0ec1a_s6.jpg">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 레시피 평가 영역 -->
+				<div class="category-wrap service-category">
+					<form id="rateForm">
+						<input type="hidden" name="recipe_num" id="recipe_num" value="24">
+						<input type="hidden" name="point" id="point_value" value="5">
+
+						<div class="review_write">
+							<h5>레시피 평가</h5>
+							<div class="writer">
+								<!-- start : 별점 -->
+								<div class="evaluation-wrap">
+									<div class="ev-icon-box">
+										<a class="ev-icon on" id="star1" onclick="chagePoint(1)"></a>
+										<a class="ev-icon on" id="star2" onclick="chagePoint(2)"></a>
+										<a class="ev-icon on" id="star3" onclick="chagePoint(3)"></a>
+										<a class="ev-icon on" id="star4" onclick="chagePoint(4)"></a>
+										<a class="ev-icon on" id="star5" onclick="chagePoint(5)"></a>
+									</div>
+									<span class="ev-text" id="point_text">강력추천</span>
+									<span class="ev-emoticon">
+										<img src="./img/icon/review_face_1.png" alt="">
+									</span>
+								</div>
+								<!-- end : 별점 -->
+								<!-- start : 후기 -->
+								<div class="review-input">
+
+
+									<textarea id="rate_cont" name="rate_cont" maxlength="1000"
+										placeholder="레시피에 대해서 간단한 소감을 남겨주세요." onclick="loginCheck();"
+										readonly=""></textarea>
+									<button class="btn st-blue" id="BtnCommentAdd" type="button"
+										onclick="loginCheck();"><span>레시피 평가하기</span></button>
+								</div>
+								<div class="review-bytes"><b id="wirteBytesCount">0</b>/1000bytes</div>
+								<!-- end : 후기 -->
+
+								<ul class="review-info">
+									<li>자유로운 이야기를 남길 회원님께서는 <b>자유게시판</b> 을 이용해주시기 바랍니다.</li>
+									<li>상업적인 광고 및 욕설, 도배성, 음해성 글의 경우 서비스 관리자에 의해 임의 수정 또는 삭제될 수 있음을 알려드립니다.</li>
+									<li>저작권 등 다른 사람의 권리를 침해하거나 명예를 훼손하는 게시글은 이용약관 및 관련법률에 의해 제재를 받을 수 있습니다.</li>
+								</ul>
+							</div>
+						</div>
+					</form>
+					<div class="review_info">
+						<div class="review_top">
+							<p>평균별점</p>
+							<div>
+								<img src="./img/icon/icon_starScore_1.gif" alt="">
+								<span class="score" id="rateavg">4</span>
+								<span>/ 5</span>
+								<span class="ment">평가를 작성하신<b id="totalRate">3</b>명의 이웃들이 "<span
+										id="ratetext">기대이상</span>" 레시피로 생각하셨습니다.</span>
+							</div>
+						</div>
+
+						<!-- list: json write -->
+						<ul class="review_list" id="rateList">
+							<li class="accordion-wrap"><a href="javascript:" class="accordion-head"
+									onclick="accordionToggle(this);">
+									<div class="accordion-head-info"><img class="stars" src="./img/icon/ico_star_2.png"
+											alt="2점"><span class="date">2025-03-17</span><span class="name">admin</span>
+									</div>
+									<div class="accordion-head-cont">내 취향엔 안맞네</div>
+								</a>
+								<div class="accordion-body">
+									<p class="text">내 취향엔 안맞네</p>
+									<div class="btns"></div>
+								</div>
+							</li>
+							<li class="accordion-wrap"><a href="javascript:" class="accordion-head"
+									onclick="accordionToggle(this);">
+									<div class="accordion-head-info"><img class="stars" src="./img/icon/ico_star_5.png"
+											alt="5점"><span class="date">2025-03-17</span><span class="name">test4</span>
+									</div>
+									<div class="accordion-head-cont">오늘은 이거다</div>
+								</a>
+								<div class="accordion-body">
+									<p class="text">오늘은 이거다</p>
+									<div class="btns"></div>
+								</div>
+							</li>
+							<li class="accordion-wrap"><a href="javascript:" class="accordion-head"
+									onclick="accordionToggle(this);">
+									<div class="accordion-head-info"><img class="stars" src="./img/icon/ico_star_5.png"
+											alt="5점"><span class="date">2025-03-17</span><span class="name">test4</span>
+									</div>
+									<div class="accordion-head-cont">깻잎전 처럼 맛있어요</div>
+								</a>
+								<div class="accordion-body">
+									<p class="text">깻잎전 처럼 맛있어요</p>
+									<div class="btns"></div>
+								</div>
+							</li>
+						</ul>
+
+						<div class="pagination jquery-paging" id="ratePaging"><a class="page number active"
+								href="javascript:getRate(1)">1</a></div>
+
+					</div>
+				</div>
+			</div>
+	</section>
+
+
+</div>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout}">
+	<div layout:fragment="content">
+		<script src="../js/board.js"></script>
+        <!-- Contact-->
+        <section class="page-section">
+        	<div class="container">
+        		<div id="content" class="content-center-w80">
+	                <!-- Begin Page Content -->
+	                <div class="container-fluid">
+	
+	                    <!-- Page Heading -->
+	                    <h1 class="h3 mb-2 text-uppercase text-color-green title_left">자유게시판 <span th:if="${#authorization.expression('hasRole(''ADMIN'')')}">관리</span></h1>
+	                    <p class="mb-4 title_left_sub">이웃들간에 자유로운 소통하는 공간이에요. 욕설, 비방보다 따듯한 말로 인터넷 예절을 지켜주세요.</p>
+	
+	                    <!-- DataTales Example -->
+	                    <div class="card shadow mb-4">
+	                        <div class="card-body">
+	                            <div class="table-responsive">
+	                                <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+	                               		<div class="row">
+	                                		<div class="col-sm-12">
+	                                			<form name="boardWriteForm" action="boardedit" method="post">
+	                                				<input type="hidden" name="board_no" th:value="${dto.board_no}">
+	                                				<input type="hidden" name="reg_member" th:value="${#authentication.principal.username}">
+	                                				<table class="table_write">
+														<colgroup>
+															<col style="width:20%;">
+															<col>
+														</colgroup>
+														<thead>
+															<tr>
+																<th scope="row">제목</th>
+																<td><input class="board_input" type="text" name="title" th:value="${dto.title}"></td>
+															</tr>
+															<tr>
+																<th scope="row">작성자</th>
+																<td th:text="${dto.reg_member}"></td>
+															</tr>
+															<tr>
+																<th scope="row">분류</th>
+																<td>
+																	<select name="category_code" id="cok_sq_category_4" th:value="${dto.category_code}">
+																		<option value="">분류선택</option>
+																		<option value="1" th:selected="1 == ${dto.category_code}">잡담</option>
+																		<option value="2" th:selected="2 == ${dto.category_code}">요리</option>
+																		<option value="3" th:selected="3 == ${dto.category_code}">정보공유</option>
+																		<option value="4" th:selected="4 == ${dto.category_code}">기타</option>
+																	</select>
+																</td>
+															</tr>
+															
+														</thead>
+														<tbody>
+															<tr>
+																<td colspan="4" style="text-align: left; padding: 40px;">
+																	<textarea class="step_cont" name="content" th:text="${dto.content}" style="width: 100%; height: 300px; resize: none; padding: 10px;"></textarea>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+	                                			</form>
+	                                		</div>
+	                                	</div>
+		                            </div>
+	                            </div>
+	                        </div>
+	                        <div class="recipe_add_div">
+			                    <button class="btn btn-secondary btn-lg text-uppercase" type="button" onclick="saveBoard();">저장</button>
+			                    <button class="btn btn-success btn-lg text-uppercase" type="button" onclick="history.back(); return false;">목록</button>
+			                </div>
+	                    </div>
+	                </div>
+	                <!-- /.container-fluid -->
+	            </div>
+        	</div>
+        </section>
+	</div>
+</html>

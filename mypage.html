@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout}">
+	<div layout:fragment="content">
+        <!-- Contact-->
+        <section class="page-section" id="contact">
+            <div class="container width30 marginTop5 shadow-lg card o-hidden border-1 shadow-lg padding40">
+                <div class="text-center">
+                    <h2 class="section-heading text-muted">회원정보</h2>
+                    <h3 class="section-subheading text-muted">회원정보를 수정할 수 있습니다.</h3>
+                </div>
+                <form id="contactForm" name="memFrm" action="updatemember" method="post">
+                    <div class="row align-items-stretch">
+                        <div class="text-center">
+                            <div class="form-group" style="text-align: justify;">
+                                <!-- ID input-->
+                                <label for="name-field" class="pb-2">아이디 *</label>
+                                <input class="form-control" id="member_id" name="member_id" type="hidden" th:value="${member.member_id}"/>
+                                <input class="form-control" id="member_id" name="view_id" type="text"  value="user" readonly="readonly" />
+                            </div>
+                            <div class="form-group" style="text-align: justify;">
+                                <!-- Password input-->
+                                <label for="name-field" class="pb-2">패스워드 *</label>
+                                <input class="form-control" id="member_pw" name="member_pw" type="Password" placeholder="비밀번호 변경시 입력해주세요. *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="memberPW:required">비밀번호 변경시 입력해주세요.</div>
+                            </div>
+                            <div class="form-group" style="text-align: justify;">
+                                <!-- Password input-->
+                                <label for="name-field" class="pb-2">패스워드 확인 *</label>
+                                <input class="form-control" id="again_pw" name="again_pw" type="Password" placeholder="패스워드 확인. *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="RePassword:required">입력하신 패스워드가 동일하지 않습니다.</div>
+                            </div>
+                            <div class="form-group" style="text-align: justify;">
+                                <!-- ID input-->
+                                <label for="name-field" class="pb-2">이름 *</label>
+                                <input class="form-control" id="member_nm" name="member_nm" type="text" value="홍길동" />
+                            </div>
+                            <div class="form-group" style="text-align: justify;">
+                                <!-- Password input-->
+                                <label for="name-field" class="pb-2">생년월일 *</label>
+                                <input class="form-control" id="birthday" name="birthday" type="date" value="2002-01-12" placeholder="생년월일 선택 *" data-sb-validations="required" />
+                            </div>
+                            <div class="form-group" style="text-align: justify;">
+                                <!-- Password input-->
+                                <label for="name-field" class="pb-2">E-MAIL</label>
+                                <input class="form-control" id="email" name="email" type="email" value="korea11@gmail.com" placeholder="이메일을 입력하세요." />
+                            </div>
+                            <div class="form-group" style="text-align: justify;">
+                                <!-- Password input-->
+                                <label for="name-field" class="pb-2">전화번호</label>
+                                <input class="form-control" id="telno" name="telno" type="text" value="01012341234" placeholder="전화번호를 입력하세요. (ex: 01012341234)" />
+                            </div>
+                            <div class="form-group" style="text-align: justify;">
+                                <!-- Password input-->
+                                <label for="name-field" class="pb-2">주소</label>
+                                <input class="form-control" id="address" name="address" type="text" value="대전광역시 서구 둔산동 길동아파트 104동 102호" placeholder="주소를 입력하세요." />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Submit Button-->
+                    <div class="text-center">
+                    	<button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="button" onclick="loadContent('login.html');">정보수정</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+	</div>
+</html>

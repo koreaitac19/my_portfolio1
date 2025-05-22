@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta http-equiv=”Expires” content=”-1″>
+	<meta http-equiv=”Pragma” content=”no-cache”>
+	<meta http-equiv=”Cache-Control” content=”No-Cache”>
+    <title>오늘의 레시피</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="./css/styles.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
+    <link href="./css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <script src="./js/join.js"></script>
+    <script src="./js/board.js"></script>
+    <script src="./js/recipe.js"></script>
+    <script src="./js/scripts.js"></script>
+    <script src="./js/admin/recipe.js"></script>
+
+</head>
+<body id="page-top">
+	<!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink navmenu" id="mainNav">
+        <div class="container">
+        	<a class="navbar-brand kaushan-script-regular" href="javascript:loadContent('home.html');">ToDay Recipe</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" 
+            	aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" onclick="menuBtnToggle()">
+                Menu
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="javascript:loadContent('home.html');">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="javascript:loadContent('recipelist.html');">오늘의 레시피</a></li>
+                    <li class="nav-item"><a class="nav-link" href="javascript:loadContent('boardlist.html');">게시판</a></li>
+                    <li th:if="${#authorization.expression('hasRole(''ADMIN'')')}" class="nav-item dropdown"><a class="nav-link" href="#"><span>관리자</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+			       		<ul>
+			            	<li><a href="javascript:loadContent('/admin/memberlist.html');">회원관리</a></li>
+			            	<li><a href="javascript:loadContent('/admin/recipelist.html');">레시피관리</a></li>
+			            	<li><a href="javascript:loadContent('/boardlist.html');">게시판관리</a></li>
+			            </ul>
+			          </li>
+                    <li sec:authorize="isAnonymous()" class="nav-item"><a class="nav-link" href="javascript:loadContent('login.html');">로그인</a></li>
+                    <li sec:authorize="isAuthenticated()" class="nav-item"><a class="nav-link" href="javascript:loadContent('mypage.html');">마이페이지</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+	<main id="content">
+        
+    </main>
+
+	<!-- Footer-->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-start">Copyright &copy; Today Recipe My Web Site Project 2025</div>
+                <div class="col-lg-4 my-3 my-lg-0">
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                	<span>CS CENTER (02-123-1234)</span><br>
+					평일운영시간 : 오전 9:00 ~ 12:00 / 오후 13:00~18:00<br>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/scripts.js"></script>
+    <script>
+        // 다른 HTML을 동적으로 로딩하는 함수
+        function loadContent(page) {
+        fetch(page)
+            .then(res => res.text())
+            .then(html => {
+            document.getElementById('content').innerHTML = html;
+            });
+        }
+
+        // 예시: page1.html의 컨텐츠를 불러옴
+        loadContent('home.html');
+    </script>
+</body>
+</html>

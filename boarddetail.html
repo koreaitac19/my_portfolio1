@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout}">
+	<div layout:fragment="content">
+		<script src="../js/board.js"></script>
+        <!-- Contact-->
+        <section class="page-section">
+            <div class="container">
+        		<div id="content" class="content-center-w80">
+	                <!-- Begin Page Content -->
+	                <div class="container-fluid">
+	
+	                    <!-- Page Heading -->
+	                    <h1 class="h3 mb-2 text-uppercase text-color-green title_left">자유게시판 <span th:if="${#authorization.expression('hasRole(''ADMIN'')')}">관리</span></h1>
+	                    <p class="mb-4 title_left_sub">이웃들간에 자유로운 소통하는 공간이에요. 욕설, 비방보다 따듯한 말로 인터넷 예절을 지켜주세요.</p>
+	
+	                    <!-- DataTales Example -->
+	                    <div class="card shadow mb-4">
+	                        <div class="card-body">
+	                            <div class="table-responsive">
+	                                <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+	                               		<div class="row">
+	                                		<div class="col-sm-12">
+	                                			<form name="boardViewForm" method="post">
+	                                				<input type="hidden" name="board_no" th:value="${dto.board_no}">
+	                                			</form>
+	                                			<table class="table_write">
+													<colgroup>
+														<col style="width:15%;">
+														<col style="width:35%;">
+														<col style="width:15%;">
+														<col>
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="row">제목</th>
+															<td colspan="3">오늘 저녁 고민 돼면 새로나온 맵탱 라면은 어때요?</td>
+														</tr>
+														<tr>
+															<th scope="row">작성자</th>
+															<td>올드맨</td>
+															
+															<th scope="row">등록일</th>
+															<td>2025-03-17
+</td>
+														</tr>
+														<tr>
+															<th scope="row">분류</th>
+															<td>요리</td>
+															<th scope="row">조회수</th>
+															<td>1,852</td>
+														</tr>
+														
+													</thead>
+													<tbody>
+														<tr>
+															<td colspan="4"style="text-align: left; padding: 40px; white-space: pre-line;">
+																삼양에서 나온 맵탱을 먹어봤습니다.
+
+																흑후추소고기라면과 마늘조개라면 두가지가 같이 나왔는데요.
+
+																4개들이 포장을 3580원에 팔더군요.
+
+																두가지맛을 섞어팔지는 않기때문에 8개를 사야했습니다.
+
+																먼저 흑후추소고기라면입니다.
+
+
+																가격에 바하면 저가라면같은 구성입니다.
+
+																맵습니다.
+																신라면보다는 훨씬 맵고요.
+																틈새라면보다는 덜 매운데 신라면더레드에 비하면 더 매운지 덜 매운지 모르겠네요.
+																어쨌든 맵긴 맵습니다.
+																맛이 나쁘진 않은데 신라면보다 비싸게 파는 건 좀 이해가 안갑니다.
+
+
+																마늘조개라면도 먹어봤습니다.
+
+																면과 건더기는 그대로고 분말스프만 다른 듯합니다.
+
+																조개맛이 꽤 진합니다.
+																매운 정도는 똑같고요.
+																해물추가해서 짬뽕라면해먹기 좋을듯합니다.
+															</td>
+														</tr>
+													</tbody>
+												</table>
+	                                		</div>
+	                                	</div>
+		                            </div>
+	                            </div>
+	                        </div>
+	                        <div class="recipe_add_div">
+			                    <button sec:authorize="isAuthenticated()" th:if="${dto.reg_member == #authentication.principal.username} or ${#authorization.expression('hasRole(''ADMIN'')')}" 
+			                    	class="btn btn-secondary btn-lg text-uppercase" type="button" onclick="editBoard()">수정</button>
+			                    <button sec:authorize="isAuthenticated()" th:if="${dto.reg_member == #authentication.principal.username} or ${#authorization.expression('hasRole(''ADMIN'')')}" 
+			                    	class="btn btn-danger btn-lg text-uppercase" type="button" onclick="deleteBoard()">삭제</button>
+			                    <button class="btn btn-success btn-lg text-uppercase" type="button" onclick="loadContent('boardlist.html');">목록</button>
+			                </div>
+	                    </div>
+	                </div>
+	                <!-- /.container-fluid -->
+	            </div>
+        	</div>
+        </section>
+	</div>
+</html>

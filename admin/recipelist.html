@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout}">
+	<div layout:fragment="content">
+	<script src="../js/admin/recipe.js"></script>
+        <!-- Contact-->
+        <section class="page-section">
+	        <div class="container">
+	        	<div id="content" class="content-center-w80">
+	                <!-- Begin Page Content -->
+	                <div class="container-fluid">
+	
+	                    <!-- Page Heading -->
+	                    <h1 class="h3 mb-2 text-uppercase text-color-green">레시피 등록 관리</h1>
+	                    <p class="mb-4">등록된 레시피를 관리하는 화면입니다.</p>
+	                    <div class="row">
+	                    	<form name="recipeListForm" action="/admin/recipelist" method="post">
+	                    		<input type="hidden" name="page" th:value="${search.page}">
+	                    		<div class="board-search">
+									<div class="search-box">
+										<select name="recordSize" title="검색개수" onchange="changeListSize()">
+											<option value="10" th:selected="10 == ${search.recordSize}">10개</option>
+											<option value="20" th:selected="20 == ${search.recordSize}">20개</option>
+											<option value="50" th:selected="50 == ${search.recordSize}">50개</option>
+										</select>
+								  	</div>
+						         	<div class="search-box">
+						            	<select name="searchType" title="검색방법">
+							            	<option value="all" th:selected="all == ${search.searchType}">레시피명+요약</option>
+							            	<option value="recipe_nm" th:selected="recipe_nm == ${search.searchType}">레시피명</option>
+							            	<option value="recipe_sum" th:selected="recipe_sum == ${search.searchType}">요약</option>
+							            </select>
+						          	</div>
+						          	<div class="search-txt">
+						            	<input type="text" th:value="${search.keyword}" name="keyword" title="검색어">
+						          	</div>
+						          	<a class="search-submit" href="javascript:searchRecipeList();" >검색</a>
+						        </div>
+	                    	</form>
+	                    </div>
+						<div class="row">
+							<h6 class="font-weight-bold text-success" style="text-align: left;">총 레시피 수 <span>20</span>개</h6>
+		                	<table class="table" width="100%" cellspacing="0" style="width: 100%;">
+		                    	<thead>
+		                        	<tr role="row" style="border-bottom: 2px solid #bba9e5;">
+			                         	<th tabindex="0" style="width: 5%;">번호</th>
+			                         	<th tabindex="0" style="width: 10%;">카테고리</th>
+			                         	<th tabindex="0" style="width: 25%;">레시피명</th>
+			                         	<th tabindex="0" style="width: 10%;">평점</th>
+			                         	<th tabindex="0" style="width: 15%;">작성자</th>
+			                         	<th tabindex="0" style="width: 15%;">작성일</th>
+			                         	<th tabindex="0" style="width: 10%;">승인여부</th>
+			                         	<th tabindex="0" style="width: 10%;">삭제여부</th>
+		                         	</tr>
+		                     	</thead>
+		                     	<tbody>
+		                     		
+			                     	<tr class="odd">
+			                             <td class="sorting_1">36</td>
+			                             <td>
+							                <span>한식</span>
+			                             </td>
+			                             <td>
+			                             	<a href="javascript:loadContent('/admin/recipedetail.html');">라면맛있게끓이는법</a>
+			                             </td>
+			                             <td>0</td>
+			                             <td>admin</td>
+			                             <td>2025-04-09</td>
+			                             <td>N</td>
+			                             <td>N</td>
+			                         </tr>
+			                     	<tr class="odd">
+			                             <td class="sorting_1">35</td>
+			                             <td>
+							                <span>한식</span>
+			                             </td>
+			                             <td>
+			                             	<a href="javascript:loadContent('/admin/recipedetail.html');">빵 맛있게 만드는법</a>
+			                             </td>
+			                             <td>0</td>
+			                             <td>old1</td>
+			                             <td>2025-03-21</td>
+			                             <td>Y</td>
+			                             <td>Y</td>
+			                         </tr>
+			                     	<tr class="odd">
+			                             <td class="sorting_1">34</td>
+			                             <td>
+							                <span>한식</span>
+			                             </td>
+			                             <td>
+			                             	<a href="javascript:loadContent('/admin/recipedetail.html');">소고기 미역국</a>
+			                             </td>
+			                             <td>3</td>
+			                             <td>auto123</td>
+			                             <td>2025-03-21</td>
+			                             <td>Y</td>
+			                             <td>Y</td>
+			                         </tr>
+			                     	<tr class="odd">
+			                             <td class="sorting_1">33</td>
+			                             <td>
+							                <span>일식</span>
+			                             </td>
+			                             <td>
+			                             	<a href="javascript:loadContent('/admin/recipedetail.html');">맛있는 콘 치즈 토스트</a>
+			                             </td>
+			                             <td>5</td>
+			                             <td>admin</td>
+			                             <td>2025-03-17</td>
+			                             <td>Y</td>
+			                             <td>N</td>
+			                         </tr>
+			                     	<tr class="odd">
+			                             <td class="sorting_1">32</td>
+			                             <td>
+							                <span>분식</span>
+			                             </td>
+			                             <td>
+			                             	<a href="javascript:loadContent('/admin/recipedetail.html');">라면</a>
+			                             </td>
+			                             <td>4</td>
+			                             <td>youngsys</td>
+			                             <td>2025-03-14</td>
+			                             <td>Y</td>
+			                             <td>N</td>
+			                         </tr>
+			                     	<tr class="odd">
+			                             <td class="sorting_1">31</td>
+			                             <td>
+							                <span>중식</span>
+			                             </td>
+			                             <td>
+			                             	<a href="javascript:loadContent('/admin/recipedetail.html');">대패 우유 카레우동 레시피</a>
+			                             </td>
+			                             <td>3</td>
+			                             <td>admin</td>
+			                             <td>2025-03-14</td>
+			                             <td>Y</td>
+			                             <td>N</td>
+			                         </tr>
+			                     	<tr class="odd">
+			                             <td class="sorting_1">30</td>
+			                             <td>
+							                <span>한식</span>
+			                             </td>
+			                             <td>
+			                             	<a href="javascript:loadContent('/admin/recipedetail.html');">전설의 잡탕찌게</a>
+			                             </td>
+			                             <td>3</td>
+			                             <td>admin</td>
+			                             <td>2025-03-13</td>
+			                             <td>Y</td>
+			                             <td>N</td>
+			                         </tr>
+			                     	<tr class="odd">
+			                             <td class="sorting_1">29</td>
+			                             <td>
+							                <span>기타</span>
+			                             </td>
+			                             <td>
+			                             	<a href="javascript:loadContent('/admin/recipedetail.html');">500원 이면 밥한끼~ 뚝딱하는 팽이버섯조림~ 너무 맛있어용^^~</a>
+			                             </td>
+			                             <td>3</td>
+			                             <td>admin</td>
+			                             <td>2025-03-13</td>
+			                             <td>Y</td>
+			                             <td>Y</td>
+			                         </tr>
+			                     	<tr class="odd">
+			                             <td class="sorting_1">28</td>
+			                             <td>
+							                <span>한식</span>
+			                             </td>
+			                             <td>
+			                             	<a href="javascript:loadContent('/admin/recipedetail.html');">돼지고기 김치찌개 달인이 되는 황금레시피</a>
+			                             </td>
+			                             <td>0</td>
+			                             <td>admin</td>
+			                             <td>2025-03-13</td>
+			                             <td>Y</td>
+			                             <td>N</td>
+			                         </tr>
+			                     	<tr class="odd">
+			                             <td class="sorting_1">27</td>
+			                             <td>
+							                <span>분식</span>
+			                             </td>
+			                             <td>
+			                             	<a href="javascript:loadContent('/admin/recipedetail.html');">최현석의 호텔 간짜파게티</a>
+			                             </td>
+			                             <td>5</td>
+			                             <td>test4</td>
+			                             <td>2025-03-13</td>
+			                             <td>Y</td>
+			                             <td>N</td>
+			                         </tr>
+			                     	<tr class="odd">
+			                             <td class="sorting_1">26</td>
+			                             <td>
+							                <span>한식</span>
+			                             </td>
+			                             <td>
+			                             	<a href="javascript:loadContent('/admin/recipedetail.html');">가지볶음보다 맛있는 가지 스테이크 맛보면 멈출 수 없어요.</a>
+			                             </td>
+			                             <td>0</td>
+			                             <td>test4</td>
+			                             <td>2025-03-13</td>
+			                             <td>Y</td>
+			                             <td>N</td>
+			                         </tr>
+			                     	<tr class="odd">
+			                             <td class="sorting_1">25</td>
+			                             <td>
+							                <span>일식</span>
+			                             </td>
+			                             <td>
+			                             	<a href="javascript:loadContent('/admin/recipedetail.html');">남은 탕수육으로 강정만들기</a>
+			                             </td>
+			                             <td>1</td>
+			                             <td>admin</td>
+			                             <td>2025-03-12</td>
+			                             <td>Y</td>
+			                             <td>N</td>
+			                         </tr>
+			                     	<tr class="odd">
+			                             <td class="sorting_1">24</td>
+			                             <td>
+							                <span>한식</span>
+			                             </td>
+			                             <td>
+			                             	<a href="javascript:loadContent('/admin/recipedetail.html');">매콤한 돼지고기깻잎전 맛있게 만들기</a>
+			                             </td>
+			                             <td>4</td>
+			                             <td>admin</td>
+			                             <td>2025-03-12</td>
+			                             <td>Y</td>
+			                             <td>N</td>
+			                         </tr>
+			                     	<tr class="odd">
+			                             <td class="sorting_1">23</td>
+			                             <td>
+							                <span>분식</span>
+			                             </td>
+			                             <td>
+			                             	<a href="javascript:loadContent('/admin/recipedetail.html');">재료도 방법도 초간단! 떠먹는 치즈감자</a>
+			                             </td>
+			                             <td>0</td>
+			                             <td>admin</td>
+			                             <td>2025-03-12</td>
+			                             <td>Y</td>
+			                             <td>N</td>
+			                         </tr>
+			                     	<tr class="odd">
+			                             <td class="sorting_1">22</td>
+			                             <td>
+							                <span>한식</span>
+			                             </td>
+			                             <td>
+			                             	<a href="javascript:loadContent('/admin/recipedetail.html');">밥 비벼 먹기 좋은 참치 두부조림</a>
+			                             </td>
+			                             <td>0</td>
+			                             <td>admin</td>
+			                             <td>2025-03-12</td>
+			                             <td>Y</td>
+			                             <td>N</td>
+			                         </tr>
+			                     	<tr class="odd">
+			                             <td class="sorting_1">21</td>
+			                             <td>
+							                <span>기타</span>
+			                             </td>
+			                             <td>
+			                             	<a href="javascript:loadContent('/admin/recipedetail.html');">하루의 마무리는 야식추천메뉴 8가지</a>
+			                             </td>
+			                             <td>0</td>
+			                             <td>admin</td>
+			                             <td>2025-03-12</td>
+			                             <td>Y</td>
+			                             <td>N</td>
+			                         </tr>
+			                     	<tr class="odd">
+			                             <td class="sorting_1">20</td>
+			                             <td>
+							                <span>한식</span>
+			                             </td>
+			                             <td>
+			                             	<a href="javascript:loadContent('/admin/recipedetail.html');">육개장 맛있게 끓이는법</a>
+			                             </td>
+			                             <td>0</td>
+			                             <td>admin</td>
+			                             <td>2025-03-11</td>
+			                             <td>N</td>
+			                             <td>Y</td>
+			                         </tr>
+			                     	<tr class="odd">
+			                             <td class="sorting_1">19</td>
+			                             <td>
+			                             	<span>양식</span> 
+			                             </td>
+			                             <td>
+			                             	<a href="javascript:loadContent('/admin/recipedetail.html');">소고기 미역국</a>
+			                             </td>
+			                             <td>2</td>
+			                             <td>test4</td>
+			                             <td>2025-03-11</td>
+			                             <td>Y</td>
+			                             <td>N</td>
+			                         </tr>
+			                     	<tr class="odd">
+			                             <td class="sorting_1">18</td>
+			                             <td>
+							                <span>일식</span>
+			                             </td>
+			                             <td>
+			                             	<a href="javascript:loadContent('/admin/recipedetail.html');">맛있는 콘 치즈 토스트</a>
+			                             </td>
+			                             <td>0</td>
+			                             <td>admin1</td>
+			                             <td>2025-03-11</td>
+			                             <td>Y</td>
+			                             <td>N</td>
+			                         </tr>
+			                     	<tr class="odd">
+			                             <td class="sorting_1">16</td>
+			                             <td>
+							                <span>일식</span>
+			                             </td>
+			                             <td>
+			                             	<a href="javascript:loadContent('/admin/recipedetail.html');">소고기미역국 맛있게 끓이는 법 소고기미역국 생일미역국 레시피</a>
+			                             </td>
+			                             <td>4</td>
+			                             <td>admin</td>
+			                             <td>2025-03-11</td>
+			                             <td>Y</td>
+			                             <td>Y</td>
+			                         </tr>
+		                 		</tbody>
+		                 	</table>      	
+		                </div>
+						<div class="row">
+	                    	<div class="dataTables_paginate paging_simple_numbers" id="dataTable_paginate" style="width: 50%; margin: 0 auto;">
+	                   			<ul class="pagination">
+	                      			<li class="paginate_button page-item previous  disabled">
+	                      				<a href="#" tabindex="0" class="page-link" onclick="changePage(0)">Previous</a>
+	                      			</li>
+	                   				<li class="paginate_button page-item  active">
+	                   					<a href="#" tabindex="0" class="page-link" onclick="changePage(1)">1</a>
+	                   				</li>
+	                   				<li class="paginate_button page-item ">
+	                   					<a href="#" tabindex="0" class="page-link" onclick="changePage(2)">2</a>
+	                   				</li>
+	                   				<li class="paginate_button page-item next  disabled" id="dataTable_next">
+	                   					<a href="#" tabindex="0" class="page-link" onclick="changePage(3)">Next</a>
+	                   				</li>
+	                   			</ul>
+	                   		</div>
+	                    </div>
+	                </div>
+	                <!-- /.container-fluid -->
+	            </div>
+	        </div>
+        </section>
+	</div>
+</html>
