@@ -44,6 +44,7 @@
                     <li class="nav-item"><a class="nav-link" href="javascript:loadContent('home.html');">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="javascript:loadContent('recipelist.html');">오늘의 레시피</a></li>
                     <li class="nav-item"><a class="nav-link" href="javascript:loadContent('boardlist.html');">게시판</a></li>
+		    <!--
                     <li th:if="${#authorization.expression('hasRole(''ADMIN'')')}" class="nav-item dropdown"><a class="nav-link" href="#"><span>관리자</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
 			       		<ul>
 			            	<li><a href="javascript:loadContent('/admin/memberlist.html');">회원관리</a></li>
@@ -51,6 +52,7 @@
 			            	<li><a href="javascript:loadContent('/boardlist.html');">게시판관리</a></li>
 			            </ul>
 			          </li>
+		    -->
                     <li sec:authorize="isAnonymous()" class="nav-item"><a class="nav-link" href="javascript:loadContent('login.html');">로그인</a></li>
                     <li sec:authorize="isAuthenticated()" class="nav-item"><a class="nav-link" href="javascript:loadContent('mypage.html');">마이페이지</a></li>
                 </ul>
